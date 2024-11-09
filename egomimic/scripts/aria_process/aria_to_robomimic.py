@@ -113,7 +113,7 @@ def single_file_conversion(dataset, mps_sample_path, filename, hand, single_acti
     ## get camera matrices
     vrs_data_provider = data_provider.create_vrs_data_provider(vrsfile)
 
-    transform = slam_to_rgb()
+    transform = slam_to_rgb(vrs_data_provider)
 
     for t in range(frame_length + 1):
         # if t >= 2000:
